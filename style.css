@@ -10,8 +10,190 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+    /**************************************
+    **************************************/
 }
 * {
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;/*ajoute un effet sur le scroll au clique*/
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(images/fond.jpg) ;
+    background-size: cover;
+}
+header div {
+    width: 200px;
+    height: 200px;
+    position: relative;  
+}
+header div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+header nav {
+    display: flex;
+    justify-content: left;
+    position: fixed;
+    top:50%;
+    left: 5%;
+    background-color: white; 
+}
+header nav li {
+    border-bottom: 1px solid black;
+}
+header nav li:nth-of-type(3) {
+    border-bottom: none;
+}
+ header nav li a{
+    list-style: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'BigNoodleTitling';
+    padding: 10px 10px;
+    color: black;
+}
+
+
+main {
+    background-color: white;
+    display: flex;
+    justify-content: right;
+}
+main section {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0;
+}
+main section>div {
+    margin: 30px;
+}
+main section>div>div {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    cursor: pointer;
+}
+main section>div>div img {
+    width: 100%;
+}
+main section>div h2 {
+    text-transform: uppercase;
+    font-family:'BigNoodleTitling';
+}
+main section>div>div p {
+    font-family: 'BigNoodleTitling';
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+main section>div>div div{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    transition: 0.5s;
+}
+.haut>div{
+    transform: translateY(-100%);
+}
+.haut:hover div{
+    transform: translateY(0);
+}
+.bas>div{
+    transform: translateY(100%);
+}
+.bas:hover div{
+    transform: translateY(0);
+}
+.droite>div{
+    transform: translateX(-100%);
+}
+.droite:hover div{
+    transform: translateX(0);
+}
+.gauche>div{
+    transform: translateX(100%);
+}
+.gauche:hover div{
+    transform: translateX(0);
+}
+
+
+footer {
+    padding: 100px;
+    background-color: black;
+}
+
+footer #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+}
+footer #double {
+    display: flex;
+}
+footer #shoes {
+    margin-right: 20px;
+    border-right: 2px solid white;
+    padding: 10px;
+}
+
+footer p{
+  color: white;
+  font-family: 'BigNoodleTitling';
+}
+.foot {
+    margin: 5px;
+    width: 30px;    
+}
+ footer #produit:hover{
+ transform:rotateY(180deg);
+ 
+ }
+ footer #converse:hover{
+    transform:rotateY(90deg);
+   
+    }
+    footer img{
+        transition: 0.5s;
+    }
+ footer #face:hover {
+    transform:rotate(45deg);
+   
+ }
+ footer #twit:hover {
+    transform:rotateX(180deg);
+ } 
+ footer #social:hover {
+    transform:rotateY(180deg);
+ }
+ footer #google:hover {
+    transform: scale(1.2);
+ }
+ footer #insta:hover{
+    transform: scale(0.8);
+ }
